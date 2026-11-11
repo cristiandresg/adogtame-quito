@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>aDOGtame UIO | Portal de Adopción</title>
+  <style>
+    /* Colores en variables */
+    :root {
+      --fondo: #fff8f0;
+      --tarjeta: #ffffff;
+      --texto: #3b2f2f;
+      --principal: #c85a17;
+      --principal-oscuro: #221b17;
+      --borde: #f0d9c4;
+      --pie: #3b2f2f;
+      --texto-pie: #fff8f0;
+      color-scheme: light;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --fondo: #221b17;
+        --tarjeta: #2f2621;
+        --texto: #f5e9dd;
+        --principal: #f0914f;
+        --principal-oscuro: #ffb27a;
+        --borde: #030303;
+        --pie: #120e0c;
+        --texto-pie: #f5e9dd;
+        color-scheme: dark;
+      }
+    }
+
+    /* Estilos generales  */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+    h2 { color: var(--principal-oscuro); text-align: center; font-size: 28px; }
+    section { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
+
+    /* Encabezados y menú  */
+    header {
+      background-color: var(--principal);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 { margin: 0; font-size: 32px; }
+    header p { margin: 5px 0 0 0; }
+
+    nav { background-color: var(--principal-oscuro); text-align: center; }
+    nav a {
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 18px;
+      font-weight: bold;
+    }
+    nav a:hover { background-color: var(--principal); }
+
+    /*  Botón  */
+    .boton, button {
+      display: inline-block;
+      background-color: var(--principal-oscuro);
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .boton:hover, button:hover { background-color: var(--principal); }
+
+    /* Inicio */
+    #inicio { text-align: center; }
+    #inicio .grande { font-size: 70px; margin: 0; }
+    #inicio h2 { font-size: 34px; }
+
+    /* Mascotas */
+    .lista-mascotas { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    article {
+      background-color: var(--tarjeta);
+      border: 2px solid var(--borde);
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+    }
+    article .foto { font-size: 60px; margin: 0; }
+    article h3 { margin: 5px 0; color: var(--principal-oscuro); }
+    article ul { list-style: none; padding: 0; margin: 10px 0; font-size: 14px; }
+    article img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px;
+    }
+
+    /* Proceso */
+    #proceso ol { max-width: 600px; margin: 0 auto; }
+    #proceso li { margin-bottom: 10px; }
+
+    /* Contacto */
+    #contacto { text-align: center; }
+    table { margin: 15px auto; border-collapse: collapse; }
+    th, td { border: 1px solid var(--borde); padding: 8px 16px; }
+    th { background-color: var(--principal); color: #ffffff; }
+    form { max-width: 400px; margin: 20px auto 0 auto; text-align: left; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid var(--borde);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 15px;
+    }
+    form button { margin-top: 15px; }
+
+    /* Pie de página  */
+    footer {
+      background-color: var(--pie);
+      color: var(--texto-pie);
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>   
+<body>
+
+  <header>
+    <h1>🐾 aDOGtame Quito</h1>
+    <p>Refugio de mascotas rescatadas en la ciudad de Quito y sus alrededores </p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#mascotas">Mascotas</a>
+    <a href="#proceso">¿Cómo adoptar?</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+
+    <section id="inicio">
+      <img src="imagenes/adopta.jpg">
+      <h2>INICIO</h2>
+      <p>
+        En aDOGtame Quito rescatamos perros y gatos de las calles de la ciudad de Quito y sus
+        alderedores, con la finalidad de darles otra oportunidad a animalitos que fueron abandonados, 
+        descartados por sus dueños o que no tuvieron la suerte de tener un hogar.
+        <br>
+        Todos nuestros animalitos están esterilizados, vacunados y esperan un hogar que les pueda brindar amor y cariño.
+      </p>
+      <a class="boton" href="#mascotas">Conoce a nuestras mascotitas</a>
+    </section>
+
+    <section id="mascotas">
+      <h2>Mascotas disponibles en adopción </h2>
+      <div class="lista-mascotas">
+
+        <article>
+          <img src="imagenes/rocky.jpg.jpg" alt="Rocky,perro mestizo de 2 años">
+          <h3>Rocky</h3>
+          <p>Perro mestizo</p>
+          <ul>
+            <li>Edad: 2 años</li>
+            <li>Tamaño: Mediano</li>
+            <li>Carácter: Juguetón</li>
+          </ul>
+          <a class="boton" href="#contacto">Quiero adoptar</a>
+        </article>
+
+        <article>
+          <img src="imagenes/luna.jpg.jpg">
+          <h3>Luna</h3>
+          <p>Gata mestiza</p>
+          <ul>
+            <li>Edad: 1 año</li>
+            <li>Tamaño: Pequeño</li>
+            <li>Carácter: Tranquila</li>
+          </ul>
+          <a class="boton" href="#contacto">Quiero adoptar</a>
+        </article>
+
+        <article>
+          <img src="imagenes/canela.jpg.jpg">
+          <h3>Canela</h3>
+          <p>Cachorra mestiza</p>
+          <ul>
+            <li>Edad: 4 meses</li>
+            <li>Tamaño: Pequeño</li>
+            <li>Carácter: Cariñosa</li>
+          </ul>
+          <a class="boton" href="#contacto">Quiero adoptar</a>
+        </article>
+
+        <article>
+          <img src="imagenes/michi.jpg.jpg">
+          <h3>Michi</h3>
+          <p>Gato blanco</p>
+          <ul>
+            <li>Edad: 3 años</li>
+            <li>Tamaño: Mediano</li>
+            <li>Carácter: Curioso</li>
+          </ul>
+          <a class="boton" href="#contacto">Quiero adoptar</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="proceso">
+      <h2>¿Cómo adoptar?</h2>
+      <ol>
+        <li>Elige a la mascotita que más te guste.</li>
+        <li>Dale clic en "Quiero Adoptar".</li>
+        <li>Llena el formulario de contacto o visítanos en el refugio.</li>
+        <li>Espera que nuestro equipo te contacte para coordinar tú tramite.</li>
+        <li>Firma el compromiso de adopción en nuestras oficinas y llévalo a casa.</li>
+      </ol>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto y horarios de atención</h2>
+      <p>📍 Dirección: Av. 12 de octubre y Vicente Ramón Roca, Quito </p>
+      <p>📞 Teléfono: 02 3946500 - ✉️ adopcionesuio@adogtame.org</p>
+
+      <table>
+        <tr>
+          <th>Día</th>
+          <th>Horario de visita</th>
+        </tr>
+        <tr>
+          <td>Lunes a Viernes</td>
+          <td>09:00 - 15:00</td>
+        </tr>
+        <tr>
+          <td>Sabados</td>
+          <td>10:00 - 14:00</td>
+        </tr>
+        <tr>
+          <td>Domingos</td>
+          <td>Cerrado</td>
+        </tr>
+      </table>
+
+      <form action="mailto:adopciones@huellitas-quito.org" method="post" enctype="text/plain">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="correo">Tu correo</label>
+        <input type="email" id="correo" name="correo">
+
+        <label for="telefono">Tu numero telefónico</label>
+        <input type="phone" id="telefono" name="telefono">
+
+        <label for="mensaje">¿Qué mascota te interesa?</label>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 aDOGtame Quito · Refugio local de mascotas</p>
+    <p>Hecho con HTML5 y CSS3 · Proyecto Cristian Gomez - Benjamin Morales</p>
+  </footer>
+
+</body>
+</html>
